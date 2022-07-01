@@ -21,6 +21,8 @@ In order to run the service, you will need [Docker](https://www.docker.com/). On
 docker compose up
 ```
 
+The key value service will be running on localhost:8000, and the test client will be on localhost:8001.
+
 ### Running the service
 
 By default, this will make the kv_service available on localhost:8000/ and the test client available on localhost:8001
@@ -48,4 +50,10 @@ python -m pytest kv_service
 
 ## Documentations
 
-With the service container running, you can view the automatically generated OpenAPI documentation at for the Key Value Service at localhost:8000/docs and the test client localhost:8001/docs
+With the service container running, you can view the automatically generated OpenAPI documentation at for the Key Value Service at localhost:8000/docs and the test client localhost:8001/docs. The API documentation should provide the needed information to hit the endpoints via whatever means you choose to hit the endpoints.
+
+e.g., a PUT request using curl can be done like so
+
+```cmd
+curl -L -X PUT -d '{"key":"newKey","value":"newValue"}' -H "Content-Type: application/json" http://localhost:8000/pairs 
+```
