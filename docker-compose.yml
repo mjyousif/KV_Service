@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  testclient:
+    image: testclient
+    build:
+      context: .
+      dockerfile: ./docker/test_client/Dockerfile
+    ports:
+      - 8001:8001
+  kvservice:
+    image: kvservice
+    build:
+      context: .
+      dockerfile: ./docker/kv_service/Dockerfile
+    ports:
+      - 8000:8000
