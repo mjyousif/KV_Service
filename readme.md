@@ -9,7 +9,7 @@ The Key Value Service hosts endpoints that allow GET, PUT, and DELETE operations
 To interact with the services, clone the repo and open the base directory
 
 ```cmd
-git clone ...
+git clone https://github.com/mjyousif/KV_Service.git
 cd KV_Service
 ```
 
